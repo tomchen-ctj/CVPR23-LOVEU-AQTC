@@ -1,0 +1,21 @@
+DATASET: 
+  ROOT: "/home/hy/ssd1/tomchen/loveu2023/dataset/assistq_test2023"
+  SPLIT: "train"
+  LABEL: "train_with_score.json"
+MODEL: 
+  VISION: "egovlp_global"
+  TEXT: "egovlp"
+INPUT: 
+  FPS: 1
+  SIZE: [336, 336] # button
+FOR:
+  VIDEO: False
+  SCRIPT: False
+  QA: False
+  PARA: False
+  GLOBAL: False
+  LOCAL: False
+  HAND: False
+  GLOBAL_LOCAL: False
+QA:
+  NUM_MASKS: -1 # best performance

@@ -1,0 +1,5 @@
+python main.py --cfg configs/egovlp_local.yaml FOR.VIDEO True FOR.LOCAL True DATASET.ROOT "/home/hy/ssd1/tomchen/loveu2023/dataset/assistq_train" DATASET.SPLIT "train" DATASET.LABEL "train_with_score.json"
+python main.py --cfg configs/egovlp_local.yaml FOR.SCRIPT True DATASET.ROOT "/home/hy/ssd1/tomchen/loveu2023/dataset/assistq_train" DATASET.SPLIT "train" DATASET.LABEL "train_with_score.json"
+python main.py --cfg configs/egovlp_local.yaml FOR.PARA True DATASET.ROOT "/home/hy/ssd1/tomchen/loveu2023/dataset/assistq_train" DATASET.SPLIT "train" DATASET.LABEL "train_with_score.json"
+python main.py --cfg configs/egovlp_local.yaml FOR.QA True FOR.LOCAL True DATASET.ROOT "/home/hy/ssd1/tomchen/loveu2023/dataset/assistq_train" DATASET.SPLIT "train" DATASET.LABEL "train_with_score.json"
+python main.py --cfg configs/egovlp_local.yaml FOR.QA True FOR.LOCAL True DATASET.ROOT "/home/hy/ssd1/tomchen/loveu2023/dataset/assistq_test2023" DATASET.SPLIT "test2023" DATASET.LABEL "test2023_without_gt_with_score.json"

@@ -1,0 +1,36 @@
+DATASET: 
+  TRAIN: '/home/hy/ssd1/tomchen/loveu2023/encoder/outputs/blipe/train'
+  VAL: '/home/hy/ssd1/tomchen/loveu2023/encoder/outputs/blip/test2023'
+  GT: False
+DATALOADER:
+  NUM_WORKERS: 4
+INPUT:
+  ISEGOVLP: False
+  DUAL: False
+  QA: 'qa_maskx-1.pth'
+  VIDEO: 'video.pth'
+  SCRIPT: 'script.pth'
+  PARA: 'paras.pth'
+  HAND: 'hands.pth' # not used
+  EGOVLP: 'video.pth' # not used
+  HANDPATH: '/home/hy/ssd1/tomchen/loveu2023/encoder/outputs/hand/train' # not used
+  VISUAL_DIM: 1024
+  VISUAL_OUT: 768
+  TEXT_DIM: 768
+  TEXT_OUT: 768
+  NUM_MASKS: 1
+MODEL:
+  ARCH: 'q2a_function_blip'
+  DIM_STATE: 768
+  NUM_HEADS: 2
+  HISTORY: 
+    TRAIN: 'gt'
+    VAL: 'max'
+    ARCH: 'gru'
+  FUNCTION_CENTRIC: True # when set to false, is sentence_centric
+SOLVER:
+  LR: 0.0001
+  BATCH_SIZE: 16  
+  MAX_EPOCHS: 100
+CHECK_VAL_EVERY_N_EPOCH: 1
+NUM_GPUS: 1

@@ -1,0 +1,32 @@
+DATASET: 
+  TRAIN: '/home/hy/ssd1/tomchen/loveu2023/encoder/outputs/vit_xlnet/train'
+  VAL: '/home/hy/ssd1/tomchen/loveu2023/encoder/outputs/vit_xlnet/test2023'
+  GT: False
+DATALOADER:
+  NUM_WORKERS: 4
+INPUT:
+  ISEGOVLP: False
+  DUAL: False
+  QA: 'qa_maskx-1.pth'
+  VIDEO: 'video.pth'
+  EGOVLP: 'video.pth'
+  SCRIPT: 'xlnet_script.pth'
+  PARA: 'xlnet_paras.pth'
+  HAND: 'hands.pth'
+  DIM: 768
+  NUM_MASKS: 1
+MODEL:
+  ARCH: 'q2a_function'
+  DIM_STATE: 768
+  NUM_HEADS: 1
+  HISTORY: 
+    TRAIN: 'gt'
+    VAL: 'max'
+    ARCH: 'gru'
+  FUNCTION_CENTRIC: True # when set to false, is sentence_centric
+SOLVER:
+  LR: 0.0001
+  BATCH_SIZE: 16  
+  MAX_EPOCHS: 100
+CHECK_VAL_EVERY_N_EPOCH: 1
+NUM_GPUS: 1

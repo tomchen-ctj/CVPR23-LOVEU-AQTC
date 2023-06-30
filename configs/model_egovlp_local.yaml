@@ -1,0 +1,36 @@
+DATASET: 
+  TRAIN: '/home/hy/ssd1/tomchen/loveu2023/encoder/outputs/egovlp_loc/train'
+  VAL: '/home/hy/ssd1/tomchen/loveu2023/encoder/outputs/egovlp_loc/test2023'
+  GT: False
+DATALOADER:
+  NUM_WORKERS: 4
+INPUT:
+  ISEGOVLP: False
+  DUAL: False
+  QA: 'qa_maskx-1.pth'
+  VIDEO: 'video_egovlp_local.pth'
+  SCRIPT: 'script.pth'
+  PARA: 'paras.pth'
+  HAND: 'hands.pth'
+  EGOVLP: 'video.pth'
+  HANDPATH: '/home/hy/ssd1/tomchen/loveu2023/encoder/outputs/hand/train'
+  VISUAL_DIM: 256
+  VISUAL_OUT: 256
+  TEXT_DIM: 256
+  TEXT_OUT: 256
+  NUM_MASKS: 1
+MODEL:
+  ARCH: 'q2a_interaction_local'
+  DIM_STATE: 512
+  NUM_HEADS: 1
+  HISTORY: 
+    TRAIN: 'gt'
+    VAL: 'max'
+    ARCH: 'gru'
+  FUNCTION_CENTRIC: True # when set to false, is sentence_centric
+SOLVER:
+  LR: 0.0001
+  BATCH_SIZE: 16  
+  MAX_EPOCHS: 100
+CHECK_VAL_EVERY_N_EPOCH: 1
+NUM_GPUS: 1
