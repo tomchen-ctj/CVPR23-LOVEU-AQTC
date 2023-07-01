@@ -60,7 +60,7 @@ CUDA_VISIBLE_DEVICES=0 python inference.py --cfg configs/model_egovlp_local.yaml
 ![codalab](./figs/results.png)
 
 
-| Model                                                        | Video Encoder | Image Encoder | Text Encoder | HOI  | Recall@1 | Recall@3 | CKPT  |
+| Model                                                        | Video Encoder | Image Encoder | Text Encoder | HOI  | R@1 | R@3 | CKPT  |
 | ------------------------------------------------------------ | ------------- | ------------- | ------------ | ---- | -------- | -------- | ------ |
 | Function-centric(baseline) ([configs/baseline.yaml](./configs/baseline.yaml)) | ViT-L         | ViT-L         | XL-Net       | N    | 63.9     | 89.5     |        |
 | BLIP-Local ([configs/model_blip.yaml](configs/model_blip.yaml)) | BLIP-ViT      | BLIP-ViT      | BLIP-T       | N    | 67.5     | 88.2     | [link](https://drive.google.com/file/d/1xrIcKNnkHURNBejagQyuanBPHXOfr5H8/view?usp=sharing) |
