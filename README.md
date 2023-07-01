@@ -71,4 +71,4 @@ CUDA_VISIBLE_DEVICES=0 python inference.py --cfg configs/model_egovlp_local.yaml
 
 ## Acknowledgement
 
-Our code is based on [Function-Centric](https://github.com/starsholic/LOVEU-CVPR22-AQTC), [EgoVLP](https://github.com/showlab/EgoVLP) and [Afformer](https://github.com/showlab/afformer). We sincerely thank the authors for their solid work and code release.
+Our code is based on [Function-Centric](https://github.com/starsholic/LOVEU-CVPR22-AQTC), [EgoVLP](https://github.com/showlab/EgoVLP) and [Afformer](https://github.com/showlab/afformer). We sincerely thank the authors for their solid work and code release.  Special thanks to [Ming](https://mitming.github.io/) for his valuable contributions and unwavering support throughout this competition.
