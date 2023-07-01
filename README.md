@@ -60,14 +60,14 @@ CUDA_VISIBLE_DEVICES=0 python inference.py --cfg configs/model_egovlp_local.yaml
 ![codalab](./figs/results.png)
 
 
-| Model                                                        | Video Encoder | Image Encoder | Text Encoder | HOI  | Alignment      | Recall@1 | Recall@3 | CKPT  |
-| ------------------------------------------------------------ | ------------- | ------------- | ------------ | ---- | -------------- | -------- | -------- | ------ |
-| Function-centric(baseline) ([configs/baseline.yaml](./configs/baseline.yaml)) | ViT-L         | ViT-L         | XL-Net       | N    | None           | 63.9     | 89.5     |        |
-| BLIP-Local ([configs/model_blip.yaml](configs/model_blip.yaml)) | BLIP-ViT      | BLIP-ViT      | BLIP-T       | N    | Bi-directional | 67.5     | 88.2     | [link](https://drive.google.com/file/d/1xrIcKNnkHURNBejagQyuanBPHXOfr5H8/view?usp=sharing) |
-| CLIP-Local ([configs/model_clip.yaml](configs/model_clip.yaml)) | CLIP-ViT      | CLIP-ViT      | XL-Net       | Y    | Unidirectional | 67.9     | 88.9     | [link](https://drive.google.com/file/d/1mLbHyF5G1fl0MlEgo59xb2hJkwCU8X9Z/view?usp=sharing) |
-| EgoVLP-Local  ([configs/model_egovlp_local.yaml](configs/model_egovlp_local.yaml)) | EgoVLP-V*     | EgoVLP-V*     | EgoVLP-T     | Y    | Bi-directional | 74.1     | 90.2     | [link](https://drive.google.com/file/d/1csiwwqn6v6prVEiXIJezZVR9V5g8v7ta/view?usp=sharing) |
-| EgoVLP-Global ([configs/model_egovlp_global.yaml](configs/model_egovlp_global.yaml)) | EgoVLP-V      | CLIP-ViT      | EgoVLP-T     | Y    | Bi-directional | 74.8     | 91.5     | [link](https://drive.google.com/file/d/1u6BEg_pBccEM_ScsKIWvNbVDEJN3sxF3/view?usp=sharing) |
-| Linear Ensemble                                              |               |               |              |      |                | 78.7     | 93.4     |        |
+| Model                                                        | Video Encoder | Image Encoder | Text Encoder | HOI  | Recall@1 | Recall@3 | CKPT  |
+| ------------------------------------------------------------ | ------------- | ------------- | ------------ | ---- | -------- | -------- | ------ |
+| Function-centric(baseline) ([configs/baseline.yaml](./configs/baseline.yaml)) | ViT-L         | ViT-L         | XL-Net       | N    | 63.9     | 89.5     |        |
+| BLIP-Local ([configs/model_blip.yaml](configs/model_blip.yaml)) | BLIP-ViT      | BLIP-ViT      | BLIP-T       | N    | 67.5     | 88.2     | [link](https://drive.google.com/file/d/1xrIcKNnkHURNBejagQyuanBPHXOfr5H8/view?usp=sharing) |
+| CLIP-Local ([configs/model_clip.yaml](configs/model_clip.yaml)) | CLIP-ViT      | CLIP-ViT      | XL-Net       | Y    | 67.9     | 88.9     | [link](https://drive.google.com/file/d/1mLbHyF5G1fl0MlEgo59xb2hJkwCU8X9Z/view?usp=sharing) |
+| EgoVLP-Local  ([configs/model_egovlp_local.yaml](configs/model_egovlp_local.yaml)) | EgoVLP-V*     | EgoVLP-V*     | EgoVLP-T     | Y    | 74.1     | 90.2     | [link](https://drive.google.com/file/d/1csiwwqn6v6prVEiXIJezZVR9V5g8v7ta/view?usp=sharing) |
+| EgoVLP-Global ([configs/model_egovlp_global.yaml](configs/model_egovlp_global.yaml)) | EgoVLP-V      | CLIP-ViT      | EgoVLP-T     | Y    | 74.8     | 91.5     | [link](https://drive.google.com/file/d/1u6BEg_pBccEM_ScsKIWvNbVDEJN3sxF3/view?usp=sharing) |
+| Linear Ensemble                                              |               |               |              |      | 78.7     | 93.4     |        |
 
 ## Acknowledgement
 
